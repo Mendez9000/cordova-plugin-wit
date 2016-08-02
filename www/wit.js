@@ -9,7 +9,7 @@ var WitCdv = {
 
 			js.type = "text/javascript";
 			js.src = "js/microphone.min.js";
-
+	alert("A4");
 			js.addEventListener('load', function() {
 				resolve();
 			}, false);
@@ -159,7 +159,9 @@ var WitCdv = {
 	},
 	
 	toggleCaptureVoiceIntent: function() {
+			alert("A0");
 		if(cordova.platformId === "browser") {
+				alert("A2");
 			if(this.listening) {
 				this.mic.stop();
 				this.listening = true;
@@ -168,6 +170,7 @@ var WitCdv = {
 				this.listening = true;
 			}
 		}else {
+			alert("A3");
 			cordova.exec(
 				function () {}, // success callback with param
 				function(err) {},
